@@ -4,6 +4,7 @@ import jobs from '../data/jobs'
 import { useParams } from 'react-router-dom'
 import { FaBookmark } from "react-icons/fa";
 import JobDescriptions from '../components/JobDescriptions';
+import { toast } from 'react-toastify';
 
 const JobDetails = () => {
     const {id} = useParams();
@@ -25,7 +26,7 @@ const JobDetails = () => {
             </div>
             <div className='flex gap-3'>
                 <button className='border text-black px-4 py-2 rounded flex items-center gap-2'><FaBookmark />Save</button>
-                <button className='bg-green-800 text-white px-4 py-2 rounded'>Apply Now</button>
+                <button onClick={()=>toast.success("Application Submitted Successfully")} className='bg-green-800 text-white px-4 py-2 rounded'>Apply Now</button>
             </div>
             </div>
 
