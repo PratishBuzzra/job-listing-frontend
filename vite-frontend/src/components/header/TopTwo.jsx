@@ -8,7 +8,7 @@ const TopTwo = () => {
   return (
      <header className='bg-[#F6FAFF] shadow-lg px-8 py-5'>
             <div className='flex justify-between items-center max-w-7xl mx-auto'>
-                <div onClick={()=>navigate('/jobs')} className='flex items-center gap-2 cursor-pointer'>
+                <div onClick={()=>navigate('/')} className='flex items-center gap-2 cursor-pointer'>
                     <IoMdArrowBack size={25}/>
                 <h2 className='text-xl'>Back to Jobs</h2>
                 </div>

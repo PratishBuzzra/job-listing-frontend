@@ -25,7 +25,7 @@ const JobCard = ({job}) => {
 
         <div className='flex items-center justify-between'>
             <p>Posted {job.posted}</p>
-            <button onClick={()=>navigate(`/jobs/${job.id}`)}
+            <button onClick={()=>navigate(`/${job.id}`)}
         className="bg-green-800 text-white px-4 py-2 rounded cursor-pointer"
       >
         View Details
