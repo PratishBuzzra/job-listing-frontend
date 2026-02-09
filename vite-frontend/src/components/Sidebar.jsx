@@ -18,7 +18,7 @@ const navItems = [
 const Sidebar = () => {
   return (
     
-        <aside className='w-64 bg-[#F1F5F9] shadow-sm  p-7 flex flex-col min-h-screen'>
+        <aside className='w-74 bg-[#F1F5F9] shadow-sm  p-7 flex flex-col min-h-screen'>
             <div className='flex items-center gap-5 mb-12'>    
                 <span><MdWork size={30}/></span>  
                 <span className='text-2xl font-bold'>JOBHUNT</span>
