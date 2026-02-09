@@ -1,10 +1,11 @@
 import React from 'react'
+import TopOne from '../components/header/TopOne'
 
 const FindJobs = () => {
   return (
     <div>
-      hello
-      
+      <TopOne />
+
     </div>
   )
 }

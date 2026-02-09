@@ -1,17 +1,18 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 
-import Sidebar from './components/Sidebar'
+
 import FindJobs from './pages/FindJobs'
+import Layout from './components/Layout'
 
 const App = () => {
   return (
-    <div>
-    <Sidebar />
+    <Layout>
+  
     <Routes>
       <Route path='/findjobs' element={<FindJobs />} />
     </Routes>
-    </div>
+    </Layout>
   )
 }
 
