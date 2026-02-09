@@ -10,7 +10,7 @@ import {Link, NavLink} from "react-router-dom"
 
 const navItems = [
   { to: '/dashboard', icon: <MdDashboard size={24} />, label: 'Dashboard' },
-  { to: '/findjobs', icon: <FaSearch size={24} />, label: 'Find Jobs' },
+  { to: '/jobs', icon: <FaSearch size={24} />, label: 'Find Jobs' },
   { to: '/applications', icon: <BiSolidNotepad size={24} />, label: 'Applications' },
   { to: '/savedjobs', icon: <FaBookmark size={24} />, label: 'Saved Jobs' },
   { to: '/messages', icon: <RiMessage2Fill size={24} />, label: 'Messages' },

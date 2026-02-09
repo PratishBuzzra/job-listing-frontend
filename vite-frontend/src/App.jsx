@@ -4,13 +4,15 @@ import { Route, Routes } from 'react-router-dom'
 
 import FindJobs from './pages/FindJobs'
 import Layout from './components/Layout'
+import JobDetails from './pages/JobDetails'
 
 const App = () => {
   return (
     <Layout>
   
     <Routes>
-      <Route path='/findjobs' element={<FindJobs />} />
+      <Route path='/jobs' element={<FindJobs />} />
+      <Route path='/jobs/:id' element={<JobDetails />} />
     </Routes>
     </Layout>
   )
