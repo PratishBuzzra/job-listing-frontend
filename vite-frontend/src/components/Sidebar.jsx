@@ -8,6 +8,7 @@ import { RiMessage2Fill } from "react-icons/ri";
 import { FaUserCircle } from "react-icons/fa";
 import {Link, NavLink} from "react-router-dom"
 
+
 const navItems = [
   { to: '/dashboard', icon: <MdDashboard size={24} />, label: 'Dashboard' },
   { to: '/', icon: <FaSearch size={24} />, label: 'Find Jobs' },
@@ -15,10 +16,20 @@ const navItems = [
   { to: '/savedjobs', icon: <FaBookmark size={24} />, label: 'Saved Jobs' },
   { to: '/messages', icon: <RiMessage2Fill size={24} />, label: 'Messages' },
 ];
-const Sidebar = () => {
+const Sidebar = ({open, setOpen}) => {
   return (
-    
-        <aside className='w-74 bg-[#F1F5F9] shadow-sm  p-7 flex flex-col min-h-screen'>
+    <>
+    {open && (
+      <div className='fixed inset-0 bg-black bg-opacity-30 z-40 md:hidden' onClick={()=>setOpen(false)}/>
+    )}
+        <aside className={`
+          fixed md:static top-0 left-0 min-h-screen z-50
+          bg-[#F1F5F9] shadow-sm p-7 flex flex-col
+          transition-transform duration-300
+          w-64
+          ${open ? "translate-x-0" : "-translate-x-full"}
+          md:translate-x-0
+        `}>
             <div className='flex items-center gap-5 mb-12'>    
                 <span><MdWork size={30}/></span>  
                 <span className='text-2xl font-bold'>JOBHUNT</span>
@@ -42,6 +53,7 @@ const Sidebar = () => {
             </div>
 
         </aside>
+        </>
       
   )
 }
